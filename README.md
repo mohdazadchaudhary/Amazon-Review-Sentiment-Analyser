@@ -87,3 +87,6 @@ Browser opens automatically at  http://localhost:8501
 Skip Steps 2 and 3 — go straight to Step 5.
 The dashboard will use VADER only + demo Amazon review data.
 Still impressive for a demo!
+
+---
+Created by Mohd Azad Chaudhary 
