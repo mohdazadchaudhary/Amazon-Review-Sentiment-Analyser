@@ -116,9 +116,28 @@ streamlit run app.py
 
 ![Main Preview](assets/Dashboard.png)
 
-| **📊 Sentiment Graphs** | **🧩 Hybrid Engine** | **📉 Sentiment Words** | **📄 Review Details** |
-| :---: | :---: | :---: | :---: |
-| <img src="assets/graph.png" width="200" /> | <img src="assets/stacks.png" width="200" /> | <img src="assets/pros&cons.png" width="200" /> | <img src="assets/review.png" width="200" /> |
+### 📊 Sentiment Distribution & Trends
+![Sentiment Graphs](assets/graph.png)
+*Analysis of star ratings and sentiment distribution charts.*
+
+---
+
+### 🧩 Hybrid Model Comparison
+![Hybrid Engine](assets/stacks.png)
+*Agreement rate comparison between VADER and Logistic Regression.*
+
+---
+
+### 📉 Top Sentiment Features
+![Sentiment Words](assets/pros&cons.png)
+*Keywords identified by the model as strongly positive or negative.*
+
+---
+
+### 📄 Detailed Review Breakdown
+![Review Details](assets/review.png)
+*Individual review analysis with final sentiment verdicts.*
+
 
 
 ---
