@@ -1,3 +1,5 @@
+![Amazon Review Sentiment Analyser Banner](assets/banner.png)
+
 # Amazon Review Sentiment Analyser
 ## IRTM Mini Project
 
