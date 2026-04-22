@@ -116,12 +116,10 @@ streamlit run app.py
 
 ![Main Preview](assets/Dashboard.png)
 
-<p align="center">
-  <img src="assets/graph.png" width="24%" />
-  <img src="assets/stacks.png" width="24%" />
-  <img src="assets/pros&cons.png" width="24%" />
-  <img src="assets/review.png" width="24%" />
-</p>
+| **📊 Sentiment Graphs** | **🧩 Hybrid Engine** | **📉 Sentiment Words** | **📄 Review Details** |
+| :---: | :---: | :---: | :---: |
+| <img src="assets/graph.png" width="200" /> | <img src="assets/stacks.png" width="200" /> | <img src="assets/pros&cons.png" width="200" /> | <img src="assets/review.png" width="200" /> |
+
 
 ---
 
