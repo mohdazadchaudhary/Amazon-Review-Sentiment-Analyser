@@ -1,94 +1,98 @@
-![Amazon Review Sentiment Analyser Banner](assets/banner.png)
+# 🚀 Amazon Review Sentiment Analyser
 
-# Amazon Review Sentiment Analyser
-## IRTM Mini Project
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.25+-red.svg)](https://streamlit.io/)
+[![NLP](https://img.shields.io/badge/NLP-VADER%20%2B%20TF--IDF-green.svg)](https://en.wikipedia.org/wiki/Natural_language_processing)
+[![Machine Learning](https://img.shields.io/badge/ML-Logistic%20Regression-orange.svg)](https://scikit-learn.org/)
+
+An advanced **End-to-End Sentiment Analysis Dashboard** that fetches real-time Amazon product reviews and performs deep sentiment classification using hybrid NLP techniques.
 
 ---
 
-## STEP 1 — Install Python libraries
-Open terminal / command prompt in this folder and run:
+## 📸 Dashboard Preview
 
-```
+![Main Dashboard](assets/Screenshot%202026-04-22%20204254.png)
+
+---
+
+## ✨ Key Features
+
+- **🔍 Real-time Scraping:** Fetch live reviews from any Amazon product using ASIN or URL (via SerpAPI).
+- **🧠 Hybrid AI Model:** Combines Lexicon-based (VADER) and Machine Learning (Logistic Regression) for maximum accuracy.
+- **📊 Visual Analytics:** 
+  - Sentiment Distribution (Donut Charts)
+  - Star Rating vs. Sentiment Correlation
+  - Interactive Word Clouds
+- **⚖️ Model Comparison:** Real-time agreement rate between VADER and Logistic Regression.
+- **📂 Review Breakdown:** Filter and read through reviews categorized by their sentiment.
+
+---
+
+## 🛠️ Getting Started
+
+### 1️⃣ Installation
+Open your terminal in the project directory and run:
+```bash
 pip install -r requirements.txt
 ```
 
----
+### 2️⃣ Dataset Preparation (Optional)
+To train the model on the full IMDB dataset:
+1. Download the [IMDB Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews).
+2. Place `IMDB Dataset.csv` in the root folder.
+3. Run the trainer:
+   ```bash
+   python sentiment_engine.py
+   ```
 
-## STEP 2 — Download the IMDB dataset (for training)
+### 3️⃣ Real Amazon Data (Optional)
+To fetch live reviews instead of demo data:
+1. Get a free API key from [SerpAPI](https://serpapi.com).
+2. Open `scraper.py` and replace `YOUR_SERPAPI_KEY_HERE` with your key.
 
-1. Go to: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
-2. Download  IMDB Dataset.csv
-3. Place it in THIS folder (same folder as app.py)
-
----
-
-## STEP 3 — Train the model
-
-```
-python sentiment_engine.py
-```
-
-This takes about 1-2 minutes.
-It will print accuracy, F1 score, and save model.pkl and vectorizer.pkl
-
----
-
-## STEP 4 — (Optional) Add SerpAPI key for real Amazon reviews
-
-1. Sign up free at: https://serpapi.com
-2. Copy your API key
-3. Open scraper.py
-4. Replace  YOUR_SERPAPI_KEY_HERE  with your actual key
-
-If you skip this step, demo data is used automatically — still works for demo!
-
----
-
-## STEP 5 — Launch the dashboard
-
-```
+### 4️⃣ Launch the Dashboard
+```bash
 streamlit run app.py
-or
-py -3.11 -m streamlit run app.py
 ```
 
-Browser opens automatically at  http://localhost:8501
+---
+
+## 📚 IRTM Concepts Used
+
+This project implements core Information Retrieval and Text Mining (IRTM) principles:
+
+| Concept | Implementation |
+| :--- | :--- |
+| **Text Preprocessing** | Cleaning, tokenization, and noise reduction |
+| **Lemmatization** | Word normalization using NLTK |
+| **TF-IDF Vectorization** | Converting text to numerical features with Bigrams |
+| **Sentiment Lexicons** | VADER-based rule analysis |
+| **Supervised Learning** | Logistic Regression classification |
+| **Performance Metrics** | Precision, Recall, and F1-Score evaluation |
 
 ---
 
-## What each file does
+## 🖼️ Visual Gallery
 
-| File                  | What it does                                    |
-|-----------------------|-------------------------------------------------|
-| sentiment_engine.py   | VADER + Logistic Regression — the ML brain      |
-| scraper.py            | Fetches Amazon reviews using SerpAPI            |
-| app.py                | Streamlit dashboard — what professor sees       |
-| requirements.txt      | All Python libraries needed                     |
-| model.pkl             | Saved trained model (created after Step 3)      |
-| vectorizer.pkl        | Saved TF-IDF vectorizer (created after Step 3)  |
-
----
-
-## IRTM Concepts in this project (for viva)
-
-| Concept              | Where used                              |
-|----------------------|-----------------------------------------|
-| Text preprocessing   | sentiment_engine.py → clean_text()      |
-| Stopword removal     | clean_text() — keeps negations          |
-| Lemmatization        | clean_text() — watches → watch          |
-| TF-IDF               | TfidfVectorizer with bigrams            |
-| Cosine similarity    | Underlying LR classification            |
-| VADER                | Lexicon-based sentiment scoring         |
-| Precision/Recall/F1  | Printed after training in Step 3        |
-| Real data retrieval  | scraper.py → SerpAPI Amazon integration |
+<p align="center">
+  <img src="assets/Screenshot%202026-04-22%20204307.png" width="45%" />
+  <img src="assets/Screenshot%202026-04-22%20204334.png" width="45%" />
+</p>
+<p align="center">
+  <img src="assets/Screenshot%202026-04-22%20204346.png" width="45%" />
+  <img src="assets/Screenshot%202026-04-22%20204355.png" width="45%" />
+</p>
 
 ---
 
-## Quick demo without dataset (works immediately)
+## 📁 File Structure
 
-Skip Steps 2 and 3 — go straight to Step 5.
-The dashboard will use VADER only + demo Amazon review data.
-Still impressive for a demo!
+- `app.py`: The Streamlit frontend dashboard.
+- `sentiment_engine.py`: ML logic, preprocessing, and model training.
+- `scraper.py`: Amazon scraping logic via SerpAPI.
+- `requirements.txt`: Project dependencies.
+- `assets/`: UI screenshots and visual assets.
 
 ---
-Created by Mohd Azad Chaudhary 
+
+<p align="center">Made for IRTM Mini Project</p>
