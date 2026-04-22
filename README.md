@@ -75,13 +75,12 @@ This project implements core Information Retrieval and Text Mining (IRTM) princi
 ## 🖼️ Visual Gallery
 
 <p align="center">
-  <img src="assets/Screenshot%202026-04-22%20204307.png" width="45%" />
-  <img src="assets/Screenshot%202026-04-22%20204334.png" width="45%" />
+  <img src="assets/Screenshot%202026-04-22%20204307.png" width="24%" />
+  <img src="assets/Screenshot%202026-04-22%20204334.png" width="24%" />
+  <img src="assets/Screenshot%202026-04-22%20204346.png" width="24%" />
+  <img src="assets/Screenshot%202026-04-22%20204355.png" width="24%" />
 </p>
-<p align="center">
-  <img src="assets/Screenshot%202026-04-22%20204346.png" width="45%" />
-  <img src="assets/Screenshot%202026-04-22%20204355.png" width="45%" />
-</p>
+
 
 ---
 
