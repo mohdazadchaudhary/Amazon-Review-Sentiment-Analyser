@@ -114,13 +114,13 @@ streamlit run app.py
 
 ## 🖼️ Dashboard Preview
 
-![Main Preview](assets/Screenshot%202026-04-22%20204254.png)
+![Main Preview](assets/Dashboard.png)
 
 <p align="center">
-  <img src="assets/Screenshot%202026-04-22%20204307.png" width="24%" />
-  <img src="assets/Screenshot%202026-04-22%20204334.png" width="24%" />
-  <img src="assets/Screenshot%202026-04-22%20204346.png" width="24%" />
-  <img src="assets/Screenshot%202026-04-22%20204355.png" width="24%" />
+  <img src="assets/graph.png" width="24%" />
+  <img src="assets/stacks.png" width="24%" />
+  <img src="assets/pros&cons.png" width="24%" />
+  <img src="assets/review.png" width="24%" />
 </p>
 
 ---
