@@ -88,14 +88,14 @@ pip install -r requirements.txt
 ```
 
 ### 2️⃣ Configure SerpAPI
-Copy `.env.example` to `.env` and replace the placeholder with your SerpAPI key:
+Create a `.env` file in the project root and add your SerpAPI key:
 ```env
 SERPAPI_KEY=your_serpapi_key_here
 ```
-The `.env` file is excluded from Git. If no key is configured, the scraper uses demo reviews.
+Replace the placeholder with your key. The `.env` file is excluded from Git; never commit or share it. If no key is configured, the scraper uses demo reviews.
 
 ### 3️⃣ Training the ML Brain
-The project requires `model.pkl` and `vectorizer.pkl`. If they aren't present, run:
+The included `model.pkl` and `vectorizer.pkl` are sufficient to run the app. To retrain them, keep `IMDB Dataset.csv` in the project root and run:
 ```bash
 python sentiment_engine.py
 ```

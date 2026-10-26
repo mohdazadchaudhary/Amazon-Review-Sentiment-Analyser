@@ -12,7 +12,12 @@ import os
 import re
 
 import requests
-from dotenv import load_dotenv
+
+try:
+    from dotenv import load_dotenv
+except ImportError:  # pragma: no cover - optional dependency for local dev
+    def load_dotenv(*args, **kwargs):
+        return False
 
 
 load_dotenv()
