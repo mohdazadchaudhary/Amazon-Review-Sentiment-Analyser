@@ -97,7 +97,7 @@ if mode == "Amazon product (ASIN/URL)":
         analyse_btn = st.button("Analyse Reviews", type="primary", use_container_width=True)
 
     # Demo tip
-   # st.caption("No API key yet? Leave the SERPAPI_KEY as-is in scraper.py — demo data will be used automatically.")
+    st.caption("Configure SERPAPI_KEY in your local .env file to fetch live reviews; demo reviews are used otherwise.")
 
     if analyse_btn and user_input:
 

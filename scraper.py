@@ -8,11 +8,16 @@ Sign up free at: https://serpapi.com
 Get your API key from: https://serpapi.com/manage-api-key
 """
 
+import os
 import re
+
 import requests
+from dotenv import load_dotenv
 
 
-SERPAPI_KEY = "c32e04b495dc8b0e88efd14deb22ea1596e12e40f47bc1de3fa861a1886962c4"
+load_dotenv()
+SERPAPI_KEY = os.getenv("SERPAPI_KEY")
+
 
 def extract_asin(url_or_asin: str) -> str:
     url_or_asin = url_or_asin.strip()
@@ -26,12 +31,7 @@ def extract_asin(url_or_asin: str) -> str:
     if re.match(r'^[A-Z0-9]{10}$', url_or_asin.upper()):
         return url_or_asin.upper()
 
-    # Accept anything if no API key (demo mode)
-    if SERPAPI_KEY == "c32e04b495dc8b0e88efd14deb22ea1596e12e40f47bc1de3fa861a1886962c4":
-        return url_or_asin if url_or_asin else "DEMO"
-
-    # With real API key — try to use input as-is
-    return url_or_asin if url_or_asin else None
+    return url_or_asin or "DEMO"
 
 def fetch_reviews(asin: str, num_pages: int = 2) -> dict:
     """
@@ -50,8 +50,7 @@ def fetch_reviews(asin: str, num_pages: int = 2) -> dict:
           'error'        : str or None
         }
     """
-    # API KEY
-    if SERPAPI_KEY == "c32e04b495dc8b0e88efd14deb22ea1596e12e40f47bc1de3fa861a1886962c4":
+    if not SERPAPI_KEY:
         # Demo mode — return realistic fake data so dashboard works without API key
         return _demo_data(asin)
 

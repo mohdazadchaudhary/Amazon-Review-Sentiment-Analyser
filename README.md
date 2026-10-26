@@ -87,14 +87,21 @@ The core intelligence combines two distinct philosophies:
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Training the ML Brain
+### 2️⃣ Configure SerpAPI
+Copy `.env.example` to `.env` and replace the placeholder with your SerpAPI key:
+```env
+SERPAPI_KEY=your_serpapi_key_here
+```
+The `.env` file is excluded from Git. If no key is configured, the scraper uses demo reviews.
+
+### 3️⃣ Training the ML Brain
 The project requires `model.pkl` and `vectorizer.pkl`. If they aren't present, run:
 ```bash
 python sentiment_engine.py
 ```
 *Note: Requires `IMDB Dataset.csv` in the same directory.*
 
-### 3️⃣ Launching the Dashboard
+### 4️⃣ Launching the Dashboard
 ```bash
 streamlit run app.py
 ```
