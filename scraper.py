@@ -12,8 +12,7 @@ import re
 import requests
 
 
-SERPAPI_KEY = "a12578b901e6ac761f5d92426e57c04b0522157107083e6f2a9c636ad88d739e"   # <-- paste your free key here
-
+SERPAPI_KEY = "c32e04b495dc8b0e88efd14deb22ea1596e12e40f47bc1de3fa861a1886962c4"
 
 def extract_asin(url_or_asin: str) -> str:
     url_or_asin = url_or_asin.strip()
@@ -28,7 +27,7 @@ def extract_asin(url_or_asin: str) -> str:
         return url_or_asin.upper()
 
     # Accept anything if no API key (demo mode)
-    if SERPAPI_KEY == "a12578b901e6ac761f5d92426e57c04b0522157107083e6f2a9c636ad88d739e":
+    if SERPAPI_KEY == "c32e04b495dc8b0e88efd14deb22ea1596e12e40f47bc1de3fa861a1886962c4":
         return url_or_asin if url_or_asin else "DEMO"
 
     # With real API key — try to use input as-is
@@ -52,7 +51,7 @@ def fetch_reviews(asin: str, num_pages: int = 2) -> dict:
         }
     """
     # API KEY
-    if SERPAPI_KEY == "a12578b901e6ac761f5d92426e57c04b0522157107083e6f2a9c636ad88d739e":
+    if SERPAPI_KEY == "c32e04b495dc8b0e88efd14deb22ea1596e12e40f47bc1de3fa861a1886962c4":
         # Demo mode — return realistic fake data so dashboard works without API key
         return _demo_data(asin)
 
